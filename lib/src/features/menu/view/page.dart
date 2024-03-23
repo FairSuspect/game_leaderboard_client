@@ -10,6 +10,7 @@ class MenuPage extends StatelessWidget {
       'Пользователи': '/users',
       'Список лидеров': '/leaderboard',
       'Игры': '/games',
+      'Чат': '/chat',
     };
     return Scaffold(
       body: Center(

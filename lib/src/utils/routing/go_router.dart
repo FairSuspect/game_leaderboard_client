@@ -6,6 +6,7 @@ import 'package:game_leaderboard_client/src/features/users/view/page.dart';
 import 'package:game_leaderboard_client/src/features/users/view/user/page.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/chat/chat.dart';
 import '../../features/leaderboard/view/page.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -39,6 +40,11 @@ final routerProvider = Provider<GoRouter>((ref) {
                   gameId: int.parse(state.pathParameters['id'] ?? '')),
             ),
           ]),
+      GoRoute(
+        path: 'chat',
+        name: ChatPage.screenName,
+        builder: (context, state) => const ChatPage(),
+      )
     ]),
   ]);
 });
